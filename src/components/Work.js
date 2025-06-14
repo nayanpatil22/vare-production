@@ -1,18 +1,19 @@
-"use client";
-import { motion } from "framer-motion";
+'use client';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const projects = [
   {
-    title: "Cinematic Ad",
-    thumbnail: "thumb1.jpg",
+    title: 'Cinematic Ad',
+    thumbnail: '/thumb1.jpg',
   },
   {
-    title: "Brand Story",
-    thumbnail: "thumb2.jpg",
+    title: 'Brand Story',
+    thumbnail: '/thumb2.jpg',
   },
   {
-    title: "Event Highlight",
-    thumbnail: "thumb3.jpg",
+    title: 'Event Highlight',
+    thumbnail: '/thumb3.jpg',
   },
 ];
 
@@ -21,7 +22,7 @@ export default function Work() {
     <section
       id="work"
       className="relative w-full text-white py-24 px-6 overflow-hidden"
-      style={{ minHeight: "100vh" }}
+      style={{ minHeight: '100vh' }}
     >
       {/* 🔹 Background Video */}
       <video
@@ -70,9 +71,11 @@ export default function Work() {
               viewport={{ once: true }}
               className="relative group rounded-xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-105"
             >
-              <img
+              <Image
                 src={project.thumbnail}
                 alt={project.title}
+                width={600}
+                height={400}
                 className="w-full h-64 object-cover brightness-[0.6] group-hover:brightness-100 transition-all duration-500"
               />
               <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3">

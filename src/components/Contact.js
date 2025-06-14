@@ -17,7 +17,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold mb-4"
         >
-          Let's Connect
+          Let&rsquo;s Connect
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -26,7 +26,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-gray-400 text-lg"
         >
-          Have a story to tell or a project in mind? Reach out — we'd love to bring your vision to life.
+          Have a story to tell or a project in mind? Reach out — we&rsquo;d love to bring your vision to life.
         </motion.p>
       </div>
 

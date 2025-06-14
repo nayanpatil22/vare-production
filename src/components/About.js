@@ -52,7 +52,7 @@ export default function About() {
           StudioReel is a creative video production company focused on cinematic storytelling. We transform ideas into stunning visuals that connect, captivate, and inspire.
         </p>
         <p>
-          From concept to final cut, we bring a director's eye to every frame. Whether it's a brand story, commercial, short film, or social media campaign — we craft each project with emotional resonance and technical finesse.
+          From concept to final cut, we bring a director&rsquo;s eye to every frame. Whether it&rsquo;s a brand story, commercial, short film, or social media campaign &mdash; we craft each project with emotional resonance and technical finesse.
         </p>
         <p>
           Our team blends artistry and technology to deliver content that not only looks great but also drives real impact. With a passion for visuals and a commitment to quality, StudioReel is where vision becomes reality.
