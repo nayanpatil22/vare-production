@@ -26,7 +26,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative w-full min-h-screen text-white py-24 px-6 overflow-hidden">
+    <section id="services" className="relative w-full min-h-screen text-white py-24 px-4 sm:px-6 overflow-hidden">
       
       {/* 🔹 Video Background */}
       <video
@@ -48,12 +48,12 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text"
         >
           What We Do
         </motion.h2>
 
-        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 md:grid-cols-3">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -61,10 +61,10 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white/5 hover:bg-white/10 border border-white/10 p-6 rounded-lg transition-all duration-300 shadow-lg"
+              className="bg-white/5 hover:bg-white/10 border border-white/10 p-5 sm:p-6 rounded-lg transition-all duration-300 shadow-lg text-left"
             >
-              <h3 className="text-xl font-semibold mb-2 text-white">{service.title}</h3>
-              <p className="text-gray-300 text-sm">{service.description}</p>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 text-white">{service.title}</h3>
+              <p className="text-gray-300 text-sm sm:text-base">{service.description}</p>
             </motion.div>
           ))}
         </div>

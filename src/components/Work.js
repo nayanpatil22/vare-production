@@ -21,7 +21,7 @@ export default function Work() {
   return (
     <section
       id="work"
-      className="relative w-full text-white py-24 px-6 overflow-hidden"
+      className="relative w-full text-white py-24 px-4 sm:px-6 overflow-hidden"
       style={{ minHeight: '100vh' }}
     >
       {/* 🔹 Background Video */}
@@ -34,7 +34,7 @@ export default function Work() {
         playsInline
       />
 
-      {/* 🔹 Optional Overlay */}
+      {/* 🔹 Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-[-1]" />
 
       {/* 🔹 Heading & Content */}
@@ -44,7 +44,7 @@ export default function Work() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text"
         >
           Our Work
         </motion.h2>
@@ -54,10 +54,9 @@ export default function Work() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-lg text-gray-300 max-w-2xl mx-auto mb-16"
+          className="text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto mb-16"
         >
-          From concept to final cut — here are a few handpicked projects that
-          reflect our cinematic storytelling.
+          From concept to final cut — here are a few handpicked projects that reflect our cinematic storytelling.
         </motion.p>
 
         {/* 🔹 Project Cards */}
@@ -76,10 +75,10 @@ export default function Work() {
                 alt={project.title}
                 width={600}
                 height={400}
-                className="w-full h-64 object-cover brightness-[0.6] group-hover:brightness-100 transition-all duration-500"
+                className="w-full h-56 sm:h-64 object-cover brightness-[0.6] group-hover:brightness-100 transition-all duration-500"
               />
               <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3">
-                <h3 className="text-white text-lg font-semibold tracking-wide">
+                <h3 className="text-white text-base sm:text-lg font-semibold tracking-wide">
                   {project.title}
                 </h3>
               </div>
