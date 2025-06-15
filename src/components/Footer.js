@@ -55,29 +55,29 @@ export default function Footer() {
             <li>
               Email:{" "}
               <a
-                href="mailto:hello@studioreel.com"
+                href="mailto:patilvinit712@gmail.com"
                 className="hover:text-white transition"
               >
-                hello@studioreel.com
+                patilvinit712@gmail.com
               </a>
             </li>
             <li>
               Instagram:{" "}
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/Vare_production"
                 className="hover:text-white transition"
               >
-                @studioreel
+                @Vare_production
               </a>
             </li>
-            <li>Location: Mumbai, India</li>
+            <li>Location: Vancouver, Canada</li>
           </ul>
         </div>
       </motion.div>
 
       {/* 🔹 Bottom Bar */}
       <div className="mt-12 border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
-        <p>&copy; {new Date().getFullYear()} Vare. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Vǎre. All rights reserved.</p>
       </div>
     </footer>
   );
