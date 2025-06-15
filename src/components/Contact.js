@@ -20,7 +20,7 @@ export default function Contact() {
     setStatus('loading');
 
     try {
-      const response = await fetch('https://sheetdb.io/api/v1/l9hqtg5ecmr4o', {
+      const response = await fetch('https://sheetdb.io/api/v1/otjz2hbpa9yem', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ data: formData }),
