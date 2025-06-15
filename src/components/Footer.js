@@ -14,7 +14,7 @@ export default function Footer() {
         {/* 🔹 Studio Info */}
         <div>
           <h2 className="text-white text-xl sm:text-2xl font-semibold mb-4">
-            StudioReel
+            Vǎre
           </h2>
           <p className="text-sm leading-relaxed text-gray-400">
             A creative video production studio crafting cinematic stories for
@@ -77,7 +77,7 @@ export default function Footer() {
 
       {/* 🔹 Bottom Bar */}
       <div className="mt-12 border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
-        <p>&copy; {new Date().getFullYear()} StudioReel. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Vare. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -1,23 +1,34 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 const projects = [
   {
     title: 'Cinematic Ad',
     thumbnail: '/thumb1.jpg',
+    btsVideo: '/bts1.mp4',
   },
   {
     title: 'Brand Story',
     thumbnail: '/thumb2.jpg',
+    btsVideo: '/bts2.mp4',
   },
   {
     title: 'Event Highlight',
     thumbnail: '/thumb3.jpg',
+    btsVideo: '/bts3.mp4',
   },
 ];
 
 export default function Work() {
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
+  // 🔒 Lock scroll when modal is open
+  useEffect(() => {
+    document.body.style.overflow = selectedVideo ? 'hidden' : '';
+  }, [selectedVideo]);
+
   return (
     <section
       id="work"
@@ -68,15 +79,23 @@ export default function Work() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="relative group rounded-xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-105"
+              onClick={() => setSelectedVideo(project.btsVideo)}
+              className="relative group rounded-xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 cursor-pointer"
             >
               <Image
                 src={project.thumbnail}
                 alt={project.title}
-                width={600}
-                height={400}
-                className="w-full h-56 sm:h-64 object-cover brightness-[0.6] group-hover:brightness-100 transition-all duration-500"
+                width={450}
+                height={600}
+                className="w-full h-[440px] object-cover scale-100 group-hover:scale-105 group-hover:contrast-125 transition-all duration-500 border border-white/10 group-hover:border-white/30"
+
               />
+
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white text-lg font-semibold">Watch BTS</span>
+              </div>
+
               <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3">
                 <h3 className="text-white text-base sm:text-lg font-semibold tracking-wide">
                   {project.title}
@@ -86,6 +105,21 @@ export default function Work() {
           ))}
         </div>
       </div>
+
+      {/* 🔹 Video Modal */}
+      {selectedVideo && (
+        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4">
+          <div className="relative w-full max-w-3xl bg-black rounded-lg overflow-hidden">
+            <button
+              onClick={() => setSelectedVideo(null)}
+              className="absolute top-2 right-3 text-white text-3xl font-bold z-10"
+            >
+              &times;
+            </button>
+            <video src={selectedVideo} controls autoPlay className="w-full h-auto" />
+          </div>
+        </div>
+      )}
     </section>
   );
 }

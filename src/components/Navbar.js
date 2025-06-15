@@ -12,7 +12,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-md text-white px-6 py-4 flex justify-between items-center">
       {/* Logo */}
       <Link href="/" className="text-2xl font-bold text-white cursor-pointer">
-        StudioReel
+        Vǎre
       </Link>
 
       {/* Hamburger for mobile */}
