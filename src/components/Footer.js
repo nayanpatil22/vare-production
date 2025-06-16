@@ -77,7 +77,7 @@ export default function Footer() {
 
       {/* 🔹 Bottom Bar */}
       <div className="mt-12 border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
-        <p>&copy; {new Date().getFullYear()} Vǎre. All rights reserved. Designed by Desyn</p>
+        <p>&copy; {new Date().getFullYear()} Vǎre. All rights reserved.</p>
       </div>
     </footer>
   );
