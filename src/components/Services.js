@@ -1,6 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
 import { FaFilm, FaBullhorn, FaCalendarAlt, FaInstagram, FaMagic } from 'react-icons/fa';
+import { TbDrone } from 'react-icons/tb';
+
 
 const services = [
   {
@@ -27,6 +29,11 @@ const services = [
     title: "Post-Production",
     description: "Editing, color grading, and VFX to polish every frame with finesse.",
     icon: <FaMagic className="text-pink-500 text-2xl" />,
+  },
+  {
+    title: "Drone Photography",
+    description: "Aerial shots that elevate storytelling with cinematic drone footage.",
+    icon: <TbDrone className="text-pink-500 text-2xl" />,
   },
 ];
 
