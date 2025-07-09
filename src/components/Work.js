@@ -7,24 +7,23 @@ const projects = [
   {
     title: 'Cinematic Ad',
     thumbnail: '/thumb1.jpg',
-    btsVideo: '/bts1.mp4',
+    btsVideo: 'https://www.youtube.com/embed/UvWrsAdgiOU?autoplay=1',
   },
   {
     title: 'Brand Story',
     thumbnail: '/thumb2.jpg',
-    btsVideo: '/bts2.mp4',
+    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_2',
   },
   {
     title: 'Event Highlight',
     thumbnail: '/thumb3.jpg',
-    btsVideo: '/bts3.mp4',
+    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3',
   },
 ];
 
 export default function Work() {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-  // 🔒 Lock scroll when modal is open
   useEffect(() => {
     document.body.style.overflow = selectedVideo ? 'hidden' : '';
   }, [selectedVideo]);
@@ -88,7 +87,6 @@ export default function Work() {
                 width={450}
                 height={600}
                 className="w-full h-[440px] object-cover scale-100 group-hover:scale-105 group-hover:contrast-125 transition-all duration-500 border border-white/10 group-hover:border-white/30"
-
               />
 
               {/* Hover Overlay */}
@@ -106,17 +104,23 @@ export default function Work() {
         </div>
       </div>
 
-      {/* 🔹 Video Modal */}
+      {/* 🔹 Video Modal (YouTube Embed) */}
       {selectedVideo && (
         <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4">
-          <div className="relative w-full max-w-3xl bg-black rounded-lg overflow-hidden">
+          <div className="relative w-full max-w-3xl aspect-video bg-black rounded-lg overflow-hidden">
             <button
               onClick={() => setSelectedVideo(null)}
               className="absolute top-2 right-3 text-white text-3xl font-bold z-10"
             >
               &times;
             </button>
-            <video src={selectedVideo} controls autoPlay className="w-full h-auto" />
+            <iframe
+              src={selectedVideo}
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              className="w-full h-full"
+            ></iframe>
           </div>
         </div>
       )}
