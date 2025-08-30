@@ -1,23 +1,37 @@
 'use client';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const projects = [
   {
-    title: 'Cinematic Ad',
-    thumbnail: '/thumb1.jpg',
+    title: 'Plaid 3.0',
+    thumbnail: '/plaid.jpeg',
     btsVideo: 'https://www.youtube.com/embed/UvWrsAdgiOU?autoplay=1',
   },
   {
-    title: 'Brand Story',
-    thumbnail: '/thumb2.jpg',
-    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_2',
+    title: 'Boxing Machine',
+    thumbnail: '/boxing_machine.jpeg',
+    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_2?autoplay=1',
   },
   {
-    title: 'Event Highlight',
-    thumbnail: '/thumb3.jpg',
-    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3',
+    title: 'Prime Hoverboard',
+    thumbnail: '/hoverboard.png',
+    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+  },
+  {
+    title: 'Portable Elliptical Trainer',
+    thumbnail: '/jogger.png',
+    btsVideo: 'https://www.youtube.com/embed/LfD9D0mXDiQ?si=U10I1R-Rsi_mkB5Z',
+  },
+  {
+    title: 'Walking Pad',
+    thumbnail: '/walkingpad.jpeg',
+    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+  },
+  {
+    title: 'Drone Photography',
+    thumbnail: '/drone.jpg',
+    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
   },
 ];
 
@@ -31,8 +45,7 @@ export default function Work() {
   return (
     <section
       id="work"
-      className="relative w-full text-white py-24 px-4 sm:px-6 overflow-hidden"
-      style={{ minHeight: '100vh' }}
+      className="relative w-full h-screen flex flex-col items-center justify-center text-white overflow-hidden"
     >
       {/* 🔹 Background Video */}
       <video
@@ -43,71 +56,47 @@ export default function Work() {
         loop
         playsInline
       />
-
-      {/* 🔹 Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-[-1]" />
 
-      {/* 🔹 Heading & Content */}
-      <div className="max-w-6xl mx-auto text-center relative z-10">
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text"
-        >
+      {/* 🔹 Heading */}
+      <div className="relative z-10 text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text">
           Our Work
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true }}
-          className="text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto mb-16"
-        >
+        </h2>
+        <p className="mt-4 text-gray-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
           From concept to final cut — here are a few handpicked projects that reflect our cinematic storytelling.
-        </motion.p>
+        </p>
+      </div>
 
-        {/* 🔹 Project Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              viewport={{ once: true }}
+      {/* 🔹 Horizontal Infinite Scroll */}
+      <div className="relative w-full overflow-hidden">
+        <div className="flex animate-marquee space-x-6">
+          {[...projects, ...projects].map((project, idx) => (
+            <div
+              key={idx}
               onClick={() => setSelectedVideo(project.btsVideo)}
-              className="relative group rounded-xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 cursor-pointer"
+              className="flex-shrink-0 w-72 cursor-pointer rounded-xl overflow-hidden shadow-lg border border-white/10 hover:border-white/30 transform hover:scale-105 transition duration-300"
             >
               <Image
                 src={project.thumbnail}
                 alt={project.title}
-                width={450}
-                height={600}
-                className="w-full h-[440px] object-cover scale-100 group-hover:scale-105 group-hover:contrast-125 transition-all duration-500 border border-white/10 group-hover:border-white/30"
+                width={400}
+                height={250}
+                className="w-full h-48 object-cover"
               />
-
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-white text-lg font-semibold">Watch BTS</span>
+              <div className="p-4 bg-black/70">
+                <h3 className="text-lg font-semibold">{project.title}</h3>
+                <p className="text-sm text-gray-300">Watch BTS →</p>
               </div>
-
-              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3">
-                <h3 className="text-white text-base sm:text-lg font-semibold tracking-wide">
-                  {project.title}
-                </h3>
-              </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
 
-      {/* 🔹 Video Modal (YouTube Embed) */}
+      {/* 🔹 Video Modal */}
       {selectedVideo && (
         <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4">
-          <div className="relative w-full max-w-3xl aspect-video bg-black rounded-lg overflow-hidden">
+          <div className="relative w-full max-w-3xl aspect-[16/9] bg-black rounded-lg overflow-hidden">
             <button
               onClick={() => setSelectedVideo(null)}
               className="absolute top-2 right-3 text-white text-3xl font-bold z-10"
