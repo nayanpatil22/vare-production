@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { FiMail } from "react-icons/fi";
+import { FiMail, FiMapPin } from "react-icons/fi"; // ✅ added FiMapPin
 import { FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
@@ -72,7 +72,10 @@ export default function Footer() {
                 @Vare_production
               </a>
             </li>
-            <li>Location: Vancouver, Canada</li>
+            <li className="flex items-center gap-2">
+              <FiMapPin className="text-gray-400" /> {/* ✅ location icon */}
+              <span>Vancouver, Canada</span>
+            </li>
           </ul>
         </div>
       </motion.div>

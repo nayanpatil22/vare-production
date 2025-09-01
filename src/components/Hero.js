@@ -16,11 +16,14 @@ export default function Hero() {
       {/* 🔹 Overlay Content */}
       <div className="z-10 max-w-4xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
-          We Don’t Just Shoot — We Tell Stories.
+          Creative Direction.
+        </h1>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+          Market-Leading Impact.
         </h1>
 
         <p className="text-xs sm:text-sm md:text-base uppercase tracking-widest text-gray-300 mb-6">
-          cinematic excellence
+          Cinematic Excellence.
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center">

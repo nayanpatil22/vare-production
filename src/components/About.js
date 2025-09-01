@@ -50,14 +50,12 @@ export default function About() {
         className="text-base sm:text-lg md:text-xl text-gray-700 max-w-[90%] sm:max-w-2xl md:max-w-3xl leading-relaxed space-y-6 z-10 text-center"
       >
         <p>
-          StudioReel is a creative video production company focused on cinematic storytelling. We transform ideas into stunning visuals that connect, captivate, and inspire.
+          Hi, I’m Vinit, the creative mind behind Vare Productions. I help brands and businesses bring their ideas to life with engaging video marketing. 
         </p>
         <p>
-          From concept to final cut, we bring a director&rsquo;s eye to every frame. Whether it&rsquo;s a brand story, commercial, short film, or social media campaign — we craft each project with emotional resonance and technical finesse.
-        </p>
+          From Amazon ads to product videos, I focus on making content that’s not only high quality but also affordable and effective.        </p>
         <p>
-          Our team blends artistry and technology to deliver content that not only looks great but also drives real impact. With a passion for visuals and a commitment to quality, StudioReel is where vision becomes reality.
-        </p>
+          Think of me as your creative partner — here to make your products shine and your brand stand out.        </p>
       </motion.div>
     </section>
   );
