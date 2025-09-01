@@ -2,22 +2,20 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-const projects = [
-  {
-    title: 'Plaid 3.0',
-    thumbnail: '/plaid.jpeg',
-    btsVideo: 'https://www.youtube.com/embed/UvWrsAdgiOU?autoplay=1',
-  },
-  {
-    title: 'Boxing Machine',
-    thumbnail: '/boxing_machine.jpeg',
-    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_2?autoplay=1',
-  },
+const others = [
   {
     title: 'Prime Hoverboard',
     thumbnail: '/hoverboard.png',
     btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
   },
+  {
+    title: 'Drone Photography',
+    thumbnail: '/drone.jpg',
+    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+  },
+];
+
+const fitness = [
   {
     title: 'Portable Elliptical Trainer',
     thumbnail: '/jogger.png',
@@ -29,42 +27,54 @@ const projects = [
     btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
   },
   {
-    title: 'Drone Photography',
-    thumbnail: '/drone.jpg',
-    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+    title: 'Boxing Machine',
+    thumbnail: '/boxing_machine.jpeg',
+    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_2?autoplay=1',
   },
   {
-    title: 'Flash Gyroscope',
+    title: 'Portable Trampoline',
+    thumbnail: '/trampo.jpeg',
+    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_2?autoplay=1',
+  },
+];
+
+
+const gyroscopes = [
+  {
+    title: 'Flash ',
     thumbnail: '/flash_gyro.jpeg',
     btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
   },
   {
-    title: 'Frost Gyroscope',
+    title: 'Frost ',
     thumbnail: '/frost_gyro.jpeg',
     btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
   },
   {
-    title: 'J30 Gyroscope',
+    title: 'J30 ',
     thumbnail: '/j30gyro.png',
     btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
   },
   {
-    title: 'radi8',
+    title: 'Radi8',
     thumbnail: '/radi_guro.jpeg',
     btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
   },
   {
-    title: 'Vortex Gyroscope',
+    title: 'Vortex ',
     thumbnail: '/vortex gyro.jpeg',
     btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
   },
   {
-    title: 'Zeno Gyroscope',
+    title: 'Zeno ',
     thumbnail: '/zeno_gyro.jpeg',
     btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
   },
-  
-  
+  {
+    title: 'Plaid 3.0',
+    thumbnail: '/plaid.jpeg',
+    btsVideo: 'https://www.youtube.com/embed/UvWrsAdgiOU?autoplay=1',
+  },
 ];
 
 export default function Work() {
@@ -74,7 +84,7 @@ export default function Work() {
     document.body.style.overflow = selectedVideo ? 'hidden' : '';
   }, [selectedVideo]);
 
-  const MarqueeRow = ({ reverse }) => (
+  const MarqueeRow = ({ projects, reverse }) => (
     <div
       className={`flex ${reverse ? 'animate-marquee-reverse' : 'animate-marquee'} space-x-4`}
     >
@@ -125,11 +135,12 @@ export default function Work() {
         </p>
       </div>
 
-      {/* 🔹 3 Rows of Marquee */}
+      {/* 🔹 3 Different Rows */}
       <div className="relative z-10 w-full space-y-4">
-        <MarqueeRow reverse={false} />
-        <MarqueeRow reverse={true} />
-        <MarqueeRow reverse={false} />
+        <MarqueeRow projects={gyroscopes} reverse={false} />
+        <MarqueeRow projects={fitness} reverse={true} />
+        <MarqueeRow projects={others} reverse={false} />
+  
       </div>
 
       {/* 🔹 Video Modal */}
