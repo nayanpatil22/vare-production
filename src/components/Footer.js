@@ -1,5 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
+import { FiMail } from "react-icons/fi";
+import { FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -51,9 +53,9 @@ export default function Footer() {
           <h3 className="text-white text-lg sm:text-xl font-medium mb-4">
             Connect
           </h3>
-          <ul className="space-y-2 text-sm break-words">
-            <li>
-              Email:{" "}
+          <ul className="space-y-3 text-sm break-words">
+            <li className="flex items-center gap-2">
+              <FiMail className="text-gray-400" />
               <a
                 href="mailto:patilvinit712@gmail.com"
                 className="hover:text-white transition"
@@ -61,8 +63,8 @@ export default function Footer() {
                 patilvinit712@gmail.com
               </a>
             </li>
-            <li>
-              Instagram:{" "}
+            <li className="flex items-center gap-2">
+              <FaInstagram className="text-gray-400" />
               <a
                 href="https://instagram.com/Vare_production"
                 className="hover:text-white transition"

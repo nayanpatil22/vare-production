@@ -33,6 +33,38 @@ const projects = [
     thumbnail: '/drone.jpg',
     btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
   },
+  {
+    title: 'Flash Gyroscope',
+    thumbnail: '/flash_gyro.jpeg',
+    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+  },
+  {
+    title: 'Frost Gyroscope',
+    thumbnail: '/frost_gyro.jpeg',
+    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+  },
+  {
+    title: 'J30 Gyroscope',
+    thumbnail: '/j30gyro.png',
+    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+  },
+  {
+    title: 'radi8',
+    thumbnail: '/radi_guro.jpeg',
+    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+  },
+  {
+    title: 'Vortex Gyroscope',
+    thumbnail: '/vortex gyro.jpeg',
+    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+  },
+  {
+    title: 'Zeno Gyroscope',
+    thumbnail: '/zeno_gyro.jpeg',
+    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+  },
+  
+  
 ];
 
 export default function Work() {
@@ -41,6 +73,31 @@ export default function Work() {
   useEffect(() => {
     document.body.style.overflow = selectedVideo ? 'hidden' : '';
   }, [selectedVideo]);
+
+  const MarqueeRow = ({ reverse }) => (
+    <div
+      className={`flex ${reverse ? 'animate-marquee-reverse' : 'animate-marquee'} space-x-4`}
+    >
+      {[...projects, ...projects].map((project, idx) => (
+        <div
+          key={idx}
+          onClick={() => setSelectedVideo(project.btsVideo)}
+          className="flex-shrink-0 w-48 cursor-pointer rounded-lg overflow-hidden shadow-lg border border-white/10 hover:border-white/30 transform hover:scale-105 transition duration-300"
+        >
+          <Image
+            src={project.thumbnail}
+            alt={project.title}
+            width={300}
+            height={200}
+            className="w-full h-32 object-cover"
+          />
+          <div className="p-2 bg-black/70">
+            <h3 className="text-sm font-semibold truncate">{project.title}</h3>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 
   return (
     <section
@@ -59,38 +116,20 @@ export default function Work() {
       <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-[-1]" />
 
       {/* 🔹 Heading */}
-      <div className="relative z-10 text-center mb-12">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text">
+      <div className="relative z-10 text-center mb-4">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text">
           Our Work
         </h2>
-        <p className="mt-4 text-gray-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
+        <p className="mt-2 text-gray-300 text-sm sm:text-base max-w-xl mx-auto">
           From concept to final cut — here are a few handpicked projects that reflect our cinematic storytelling.
         </p>
       </div>
 
-      {/* 🔹 Horizontal Infinite Scroll */}
-      <div className="relative w-full overflow-hidden">
-        <div className="flex animate-marquee space-x-6">
-          {[...projects, ...projects].map((project, idx) => (
-            <div
-              key={idx}
-              onClick={() => setSelectedVideo(project.btsVideo)}
-              className="flex-shrink-0 w-72 cursor-pointer rounded-xl overflow-hidden shadow-lg border border-white/10 hover:border-white/30 transform hover:scale-105 transition duration-300"
-            >
-              <Image
-                src={project.thumbnail}
-                alt={project.title}
-                width={400}
-                height={250}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4 bg-black/70">
-                <h3 className="text-lg font-semibold">{project.title}</h3>
-                <p className="text-sm text-gray-300">Watch BTS →</p>
-              </div>
-            </div>
-          ))}
-        </div>
+      {/* 🔹 3 Rows of Marquee */}
+      <div className="relative z-10 w-full space-y-4">
+        <MarqueeRow reverse={false} />
+        <MarqueeRow reverse={true} />
+        <MarqueeRow reverse={false} />
       </div>
 
       {/* 🔹 Video Modal */}

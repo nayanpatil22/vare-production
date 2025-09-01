@@ -27,13 +27,39 @@ body {
 html {
   scroll-behavior: smooth;
 }
+/* 🌟 Marquee Animations */
 @keyframes marquee {
-  0%   { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
 }
 
 .animate-marquee {
-  display: flex;
-  width: max-content;
-  animation: marquee 25s linear infinite;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 35s linear infinite;
+}
+
+.marquee-row {
+  overflow: hidden;
+  width: 100%;
 }

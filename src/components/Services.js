@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { FaFilm, FaBullhorn, FaCalendarAlt, FaInstagram, FaMagic } from 'react-icons/fa';
+import { FaFilm, FaBullhorn, FaCalendarAlt, FaInstagram, FaMagic, FaUsers } from 'react-icons/fa';
 import { TbDrone } from 'react-icons/tb';
 
 
@@ -16,9 +16,14 @@ const services = [
     icon: <FaFilm className="text-pink-500 text-2xl" />,
   },
   {
-    title: "Event Coverage",
-    description: "Capture events in a crisp, clean, and stylish cinematic form.",
-    icon: <FaCalendarAlt className="text-pink-500 text-2xl" />,
+    title: "Drone Photography",
+    description: "Aerial shots that elevate storytelling with cinematic drone footage.",
+    icon: <TbDrone className="text-pink-500 text-2xl" />,
+  },
+  {
+    title: "Influencer Network",
+    description: "Connect with influencers to amplify your brand's reach and impact.",
+    icon: <FaUsers className="text-pink-500 text-2xl" />,
   },
   {
     title: "Social Media Content",
@@ -29,11 +34,6 @@ const services = [
     title: "Post-Production",
     description: "Editing, color grading, and VFX to polish every frame with finesse.",
     icon: <FaMagic className="text-pink-500 text-2xl" />,
-  },
-  {
-    title: "Drone Photography",
-    description: "Aerial shots that elevate storytelling with cinematic drone footage.",
-    icon: <TbDrone className="text-pink-500 text-2xl" />,
   },
 ];
 
