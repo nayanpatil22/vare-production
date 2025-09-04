@@ -4,71 +4,76 @@ import Image from 'next/image';
 
 const others = [
   {
-    title: 'Prime Hoverboard',
+    title: 'Prime Hoverboard', //done
     thumbnail: '/hoverboard.png',
-    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+    btsVideo: 'https://www.youtube.com/embed/ZBHMsCnhuEc?si=j2YTlDkX1bIvKUu2',
   },
   {
-    title: 'Drone Photography',
-    thumbnail: '/drone.jpg',
-    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+    title: 'Bowen Island Drone Journey', //done
+    thumbnail: '/drone2.png',
+    btsVideo: 'https://youtube.com/embed/RB0jA9FGgYA?si=ssYmkZYd9lj9-O8u',
+  },
+  {
+    title: 'Gaming Desk', //done
+    thumbnail: '/desk2.png',
+    btsVideo: 'https://www.youtube.com/embed/Y6kqJ3lXLDY?si=l3xu31zo7OzulQSf',
   },
 ];
 
 const fitness = [
   {
-    title: 'Portable Elliptical Trainer',
+    title: 'Portable Elliptical Trainer', //done
     thumbnail: '/jogger.png',
     btsVideo: 'https://www.youtube.com/embed/LfD9D0mXDiQ?si=U10I1R-Rsi_mkB5Z',
   },
   {
-    title: 'Walking Pad',
+    title: 'Walking Pad', //done
     thumbnail: '/walkingpad.jpeg',
-    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+    btsVideo: 'https://www.youtube.com/embed/mls1a7WLXQ8?si=au87XliaecAUbxXW',
   },
   {
-    title: 'Boxing Machine',
+    title: 'Boxing Machine', //done
     thumbnail: '/boxing_machine.jpeg',
-    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_2?autoplay=1',
+    btsVideo: 'https://www.youtube.com/embed/QJAu4VHhcSI?si=zayVx6_GUZVMPgi9',
   },
   {
-    title: 'Portable Trampoline',
-    thumbnail: '/trampo.jpeg',
-    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_2?autoplay=1',
+    title: 'Portable Trampoline', //done
+    thumbnail: '/mini_trampoline.png',
+    btsVideo: 'https://youtube.com/embed/1tIBDrMTNgg?si=GljCDvt2RXeoyWT4',
   },
 ];
 
 
 const gyroscopes = [
   {
-    title: 'Flash ',
+    title: 'Flash ', //done
     thumbnail: '/flash_gyro.jpeg',
-    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+    btsVideo: 'https://youtube.com/embed/MPCCbKNMpCQ?si=HywmDNHrBzJQunyf',
   },
   {
-    title: 'Frost ',
+    title: 'Frost ', //done
     thumbnail: '/frost_gyro.jpeg',
-    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+    btsVideo: 'https://youtube.com/embed/i3_GHHoEd0I?si=ujwknp0VGIB9jLme',
   },
   {
-    title: 'J30 ',
+    title: 'J30 ', //done
     thumbnail: '/j30gyro.png',
-    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+    btsVideo: 'https://youtube.com/embed/TXwsy9Xp9DI?si=7tKWQJp3dFc1cK2h',
   },
   {
-    title: 'Radi8',
+    title: 'Radi8', //done
     thumbnail: '/radi_guro.jpeg',
-    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+    btsVideo: 'https://youtube.com/embed/kSYBU87GzoA?si=m75oWL9hlXArJ0B4',
   },
   {
-    title: 'Vortex ',
+    title: 'Vortex ', //done
     thumbnail: '/vortex gyro.jpeg',
-    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+    btsVideo: 'https://youtube.com/embed/6aBSot4YD7M?si=qrH14JvYsf6YOZog',
   },
   {
-    title: 'Zeno ',
+    title: 'Zeno ', //done
     thumbnail: '/zeno_gyro.jpeg',
-    btsVideo: 'https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1',
+    btsVideo: 'https://youtube.com/embed/dK65pS4F03M?si=t-3c4-Ng6ipH-2Q9',
   },
   {
     title: 'Plaid 3.0',
