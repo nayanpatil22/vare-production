@@ -4,11 +4,6 @@ import Image from 'next/image';
 
 const others = [
   {
-    title: 'Prime Hoverboard', //done
-    thumbnail: '/hoverboard.png',
-    btsVideo: 'https://www.youtube.com/embed/ZBHMsCnhuEc?si=j2YTlDkX1bIvKUu2',
-  },
-  {
     title: 'Bowen Island Drone Journey', //done
     thumbnail: '/drone2.png',
     btsVideo: 'https://youtube.com/embed/RB0jA9FGgYA?si=ssYmkZYd9lj9-O8u',
@@ -79,6 +74,11 @@ const gyroscopes = [
     title: 'Plaid 3.0',
     thumbnail: '/plaid.jpeg',
     btsVideo: 'https://www.youtube.com/embed/UvWrsAdgiOU?autoplay=1',
+  },
+  {
+    title: 'Prime Hoverboard', //done
+    thumbnail: '/hoverboard.png',
+    btsVideo: 'https://www.youtube.com/embed/ZBHMsCnhuEc?si=j2YTlDkX1bIvKUu2',
   },
 ];
 
