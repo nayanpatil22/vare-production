@@ -36,6 +36,11 @@ const fitness = [
     thumbnail: '/mini_trampoline.png',
     btsVideo: 'https://youtube.com/embed/1tIBDrMTNgg?si=GljCDvt2RXeoyWT4',
   },
+  {
+    title: 'Adjustable dumbells', 
+    thumbnail: '/dumbells.png',
+    btsVideo: 'https://www.youtube.com/embed/LfD9D0mXDiQ?si=U10I1R-Rsi_mkB5Z',
+  },
 ];
 
 
@@ -79,6 +84,11 @@ const gyroscopes = [
     title: 'Prime Hoverboard', //done
     thumbnail: '/hoverboard.png',
     btsVideo: 'https://www.youtube.com/embed/ZBHMsCnhuEc?si=j2YTlDkX1bIvKUu2',
+  },
+  {
+    title: 'Flash X', //done
+    thumbnail: '/flashx.png',
+    btsVideo: 'https://youtube.com/embed/g5zamHwqFf4?si=yqDJ0jGTAKNBfXoS',
   },
 ];
 
